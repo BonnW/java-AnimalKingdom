@@ -1,57 +1,32 @@
 package com.lambdaschool;
 
-import java.util.Random;
-
 public abstract class AbstractAnimal
 {
-   private Random rand = new Random();
-   int id = rand.nextInt(1000000);
+    int energy;
+   String name;
+   int yearDiscovered;
+   int id;
 
-   private int energy = 1;
-   public void eat(String food)
-   {
-       energy++;
-   }
-
-    public int getEnergy()
+    public AbstractAnimal(int energy)
     {
-        return energy;
+        this.energy = energy;
     }
 
-    private String name;
-   public AbstractAnimal(String name)
-   {
-       this.name = name;
-   }
-
-    public void setName(String name)
+    public AbstractAnimal()
     {
-        this.name = name;
+        energy = 1;
     }
 
-    private int yearDiscovered;
-   public AbstractAnimal(int year)
-   {
-       this.yearDiscovered = year;
-   }
 
-    public int getYearDiscovered()
-    {
-        return yearDiscovered;
-    }
+    public abstract void eat();
 
-    public void move(int steps)
-    {
-        energy = energy - steps;
-    }
+   public abstract String move();
 
-    public String breath()
-    {
-        return "GASP";
-    }
 
-    public String reproduce()
-    {
-        return "OH MY GOD I HAVE A BABY";
-    }
+   public abstract String breath();
+
+
+   public abstract String reproduce();
+
+
 }
