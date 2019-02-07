@@ -9,6 +9,11 @@ public class Birds extends AbstractAnimal
         super(energy);
     }
 
+    @Override public String getName()
+    {
+        return this.name;
+    }
+
     @Override
     public void eat()
     {

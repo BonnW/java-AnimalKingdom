@@ -4,9 +4,15 @@ public class Mammals extends AbstractAnimal
 {
     public String name;
 
-    public Mammals(String name, int energy)
+    public Mammals(String name, int yearDiscovered, int energy)
     {
         super(energy);
+    }
+
+    @Override
+    public String getName()
+    {
+        return this.name;
     }
 
     @Override

@@ -10,6 +10,12 @@ public class Fish extends AbstractAnimal
     }
 
     @Override
+    public String getName()
+    {
+        return this.name;
+    }
+
+    @Override
     public void eat()
     {
         energy++;
